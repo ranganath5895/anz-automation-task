@@ -1,0 +1,14 @@
+target/
+test-output/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+#Automation report
+automation-report.html
+*.html
+.classpath
+.project
+org.eclipse.jdt.core.prefs
+org.eclipse.m2e.core.prefs
+org.eclipse.core.resources.prefs

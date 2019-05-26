@@ -1,0 +1,24 @@
+[
+	{
+		"noOfDependents": 0,
+		"primaryIncome": 80000,
+		"otherIncome": 10000,
+		"livingExpenses": 500,
+		"currentHomeLoanRepayments": 0,
+		"otherLoanPayments": 100,
+		"otherCommitments": 0,
+		"totalCreditCardLimit": 10000,
+		"estimatedLimit": 479000
+	},
+	{
+		"noOfDependents": 0,
+		"primaryIncome": 82600,
+		"otherIncome": 10000,
+		"livingExpenses": 500,
+		"currentHomeLoanRepayments": 0,
+		"otherLoanPayments": 100,
+		"otherCommitments": 0,
+		"totalCreditCardLimit": 10000,
+		"estimatedLimit": 479000
+	}
+]
