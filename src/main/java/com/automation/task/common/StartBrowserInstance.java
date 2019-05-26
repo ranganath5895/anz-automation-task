@@ -91,7 +91,9 @@ class StartBrowserInstance {
 			
 			driver = new RemoteWebDriver(url,capabilities);
 			
-			ReportLogger.log("Session Id ::: " + ((RemoteWebDriver) driver).getSessionId());
+			String linkToViewVideo = "http://s3-ap-southeast-2.amazonaws.com/b2733248-ac68-6742-a2c8-80e6479ae16a/29cef515-3123-2aa2-d425-1f267bb9fb6b/play.html?"+((RemoteWebDriver) driver).getSessionId();
+			
+			ReportLogger.log("View the video Of Execution :: <a href='"+linkToViewVideo+"'> <b> Video </b> </a>"); 
     		
 		}
 		

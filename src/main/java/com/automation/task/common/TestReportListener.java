@@ -1,5 +1,7 @@
 package com.automation.task.common;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.IInvokedMethod;
@@ -122,10 +124,25 @@ public class TestReportListener implements ITestListener, IInvokedMethodListener
 		}
 
 		String statckTraces = TestNGHelper.getStackTraces(testResult);
-		String testLogs = String.join("<br>", Reporter.getOutput(testResult)) + "<br>";
+		String testLogs = constructTableForTestCaseLogs(Reporter.getOutput(testResult));
 		ReportConstantStrings.setTemplateRowContent(canonicalClassName, methodName, testResult.getStatus(), parameters,
 				statckTraces, testLogs);
 
 	}
 
+   private String constructTableForTestCaseLogs(List<String> testCaseLogs) {
+	   
+	   StringBuilder stringBuilderForTestCaseLogs = new StringBuilder();
+	   
+	   int stepCounter = 1;
+	   
+	   for(String eachTestCaseLog : testCaseLogs){
+		   stringBuilderForTestCaseLogs.append("<br>");
+		   stringBuilderForTestCaseLogs.append("&nbsp; "+stepCounter+": &nbsp;");
+		   stringBuilderForTestCaseLogs.append(eachTestCaseLog);
+		   stepCounter = stepCounter + 1;
+	   }
+	   
+	   return stringBuilderForTestCaseLogs.toString();
+   }	
 }

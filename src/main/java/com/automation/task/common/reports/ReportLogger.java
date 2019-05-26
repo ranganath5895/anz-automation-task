@@ -45,7 +45,7 @@ public class ReportLogger {
     			"                        </div>\n" + 
     			"                      </div>\n" + 
     			"                      <u>\n" + 
-    			"                        <span style=\"font-size:15px;cursor:pointer\" onclick=\"openNav("+screenshotName+")\">Screenshot</span> \n" + 
+    			"                      <span style=\"color:blue;font-size:15px;cursor:pointer\" onclick=\"openNav("+screenshotName+")\"> <b> Screenshot </b> </span> \n" + 
     			"                      </u>";
     	return templateContentForScreenshot;
     	

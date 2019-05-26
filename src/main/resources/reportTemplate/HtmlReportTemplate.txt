@@ -19,6 +19,25 @@
             width: 100%;
         }
         
+        .sno{
+        	width:5%;
+        }
+        
+        .className{
+        	width:10%;
+        }
+        
+        .methodName{
+        	width:50%;
+        }
+        
+        .status{
+        	width:20%;
+        }
+        .parameters{
+        	width:15%;
+        }
+        
         .bordered {
             border: solid #ccc 1px;
             -moz-border-radius: 6px;
@@ -245,11 +264,11 @@
     <table class='bordered'>
         <thead>
             <tr>
-                <th>S.No</th>
-                <th>TestClassName</th>
-                <th>MethodName</th>
-                <th>Status</th>
-                <th>Parameters</th>
+                <th class='sno'>S.No</th>
+                <th class='className'>TestClassName</th>
+                <th class='methodName'>MethodName</th>
+                <th class='status'>Status</th>
+                <th class='parameters'>Parameters</th>
             </tr>
         </thead>
         <tbody> 
