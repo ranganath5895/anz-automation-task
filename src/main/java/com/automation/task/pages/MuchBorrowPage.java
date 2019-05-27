@@ -1,5 +1,8 @@
 package com.automation.task.pages;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -90,8 +93,25 @@ public class MuchBorrowPage {
 		ReportLogger.log(" Personal Details for Loan Eligibility Check Entered Successfully", true);
 	}
 	
-	public void validateAllFieldsAreResettedToDefaults(UserData userData) {
+	public void validateAllFieldsAreResettedToDefaults(UserData userData) throws CommonException {
 		
-		
+		Select selectOfNoOfDependents = new Select(noOfDependents);
+		assertEquals(selectOfNoOfDependents.getFirstSelectedOption().getText(), "0");
+
+		assertEquals(getPrimaryIncomeTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Primary Income to Zero After Reset is Succesful");
+		assertEquals(getOtherIncomeTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Other Income to Zero After Reset is Succesful");
+		assertEquals(getLivingExpensesTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Living Expenses to Zero After Reset is Succesful");
+		assertEquals(getCurrentHomeLoansRePaymentTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of HomeLoan RePayment to Zero After Reset is Succesful");
+		assertEquals(getOtherLoanRepaymentsTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Other Loan Re-Payment to Zero After Reset is Succesful");
+		assertEquals(getOtherCommitmentsTextField().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Other Commitments to Zero After Reset is Succesful");
+		assertEquals(getTotalCrediCardLimits().getAttribute("value"),"0");
+		ReportLogger.log("Validation of Total CreditCard Limit to Zero After Reset is Succesful");
 	}
+	
 }
